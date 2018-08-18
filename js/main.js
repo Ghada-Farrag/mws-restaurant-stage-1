@@ -4,6 +4,9 @@ let restaurants,
 var newMap
 var markers = []
 
+const indexController = new IndexController(document.querySelector('.main'));
+
+
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
