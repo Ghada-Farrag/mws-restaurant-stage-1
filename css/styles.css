@@ -1,16 +1,20 @@
 @charset "utf-8";
 /* CSS Document */
+img, embed, object, video {
+            max-width: 100%; /*overrides the width - so it will not overflow the viewport width*/
+        }
 
 body,td,th,p{
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10pt;
+	font-size: 16pt;
 	color: #333;
-	line-height: 1.5;
+	line-height: 1.5em;
 }
 body {
 	background-color: #fdfdfd;
 	margin: 0;
-	position:relative;
+  position:relative;
+  max-width: 100%;
 }
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
@@ -19,7 +23,8 @@ ul, li {
 }
 a {
 	color: orange;
-	text-decoration: none;
+  padding: 1.5em inherit;
+  text-decoration: none;
 }
 a:hover, a:focus {
 	color: #3397db;
@@ -38,6 +43,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
+  max-width: 100%;
 }
 #footer {
   background-color: #444;
@@ -47,6 +53,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+  max-width: 100%;
 }
 /* ====================== Navigation ====================== */
 nav {
@@ -54,6 +61,7 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
+  
 }
 nav h1 {
   margin: auto;
@@ -101,14 +109,16 @@ nav h1 a {
 #map {
   height: 400px;
   width: 100%;
+  max-width: 100%;
   background-color: #ccc;
 }
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
-  width: 100%;
-  height: 50px;
+  max-width: 100%;
+  height: 100%;
   background-color: #3397DB;
   align-items: center;
+  justify-content: center;
 }
 .filter-options h2 {
   color: white;
@@ -136,6 +146,8 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 #restaurants-list li {
   background-color: #fff;
