@@ -1,7 +1,8 @@
 class IndexController {
-  
+
   constructor(container) {
     this._container = container;
+
     this.registerServiceWorker();
   }
 
@@ -9,7 +10,7 @@ class IndexController {
     if (!navigator.serviceWorker) return;
 
     const indexController = this;
-
+    /**/
     navigator.serviceWorker.register('./sw.js').then(reg => {
       if (!navigator.serviceWorker.controller) {
         return;
