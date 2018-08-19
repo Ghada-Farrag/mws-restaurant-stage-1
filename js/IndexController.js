@@ -1,5 +1,4 @@
 class IndexController {
-
   
   constructor(container) {
     this._container = container;
