@@ -1,4 +1,4 @@
-const staticCacheName = 'gf_restaurant-static-06';
+const staticCacheName = 'gf_restaurant-static-07';
 const allCaches = [
     staticCacheName
 ];
@@ -8,7 +8,6 @@ self.addEventListener('install', function (event) {
         caches.open(staticCacheName).then(cache => {
             return cache.addAll([
                 './index.html',
-                './css/styles.css',
                 './data/restaurants.json',
                 './js/dbhelper.js',
                 './js/restaurant_info.js',
@@ -35,6 +34,7 @@ self.addEventListener('activate', function (event) {
 });
 
 //new version of fetch listener
+
 self.addEventListener('fetch', event => {
     const requestUrl = new URL(event.request.url);
     //if (requestUrl.origin === location.origin) {
@@ -56,7 +56,7 @@ self.addEventListener('fetch', event => {
             }
         )).catch(event => console.log('Fetching online or from cache error ', event));
     //}
-});
+}); 
 
 
 self.addEventListener('message', function (event) {
