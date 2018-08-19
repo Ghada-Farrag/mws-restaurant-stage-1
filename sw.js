@@ -9,6 +9,7 @@ self.addEventListener('install', function (event) {
             return cache.addAll([
                 './index.html',
                 './data/restaurants.json',
+                './js/indexController.js',
                 './js/dbhelper.js',
                 './js/restaurant_info.js',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
