@@ -1,5 +1,6 @@
 class IndexController {
 
+  
   constructor(container) {
     this._container = container;
     this.registerServiceWorker();
