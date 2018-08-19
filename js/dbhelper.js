@@ -10,7 +10,9 @@ class DBHelper {
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
     //return `http://localhost:${port}/data/restaurants.json`;
+    //return `https://ghada-farrag.github.io/mws-restaurant-stage-1/data/restaurants.json`;
     return `http://localhost/data/restaurants.json`;
+
   }
 
   /**
@@ -86,8 +88,8 @@ class DBHelper {
   /**
    * Fetch restaurants by a cuisine and a neighborhood with proper error handling.
    */
-  static fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood, callback) {
-    // Fetch all restaurants
+  // Fetch all restaurants
+    static fetchRestaurantByCuisineAndNeighborhood(cuisine, neighborhood, callback) {
     DBHelper.fetchRestaurants((error, restaurants) => {
       if (error) {
         callback(error, null);

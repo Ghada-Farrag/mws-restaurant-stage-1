@@ -47,7 +47,7 @@ class IndexController {
     const ok = confirm("New version available online. Do you want to refresh? ");
     if (ok) {
       worker.postMessage({ action: 'skipWaiting' });
-      //this.loadFromDB = false;
+
     };
   }
 
