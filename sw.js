@@ -1,4 +1,4 @@
-const staticCacheName = 'gf_restaurant-static-07';
+const staticCacheName = 'gf_restaurant-static-08';
 const allCaches = [
     staticCacheName
 ];
@@ -7,11 +7,14 @@ self.addEventListener('install', function (event) {
     event.waitUntil(
         caches.open(staticCacheName).then(cache => {
             return cache.addAll([
+                './',
                 './index.html',
+                './restaurant.html',
                 './data/restaurants.json',
                 './js/indexController.js',
                 './js/dbhelper.js',
                 './js/restaurant_info.js',
+                './js/main.js',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
                 'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css'
 
