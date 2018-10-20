@@ -1,3 +1,5 @@
+
+
 class IndexController {
 
     constructor(container) {
@@ -5,7 +7,9 @@ class IndexController {
         this.registerServiceWorker();
     }
 
+    
     registerServiceWorker() {
+        console.log('Registering SW .................');
         if (!navigator.serviceWorker) return;
 
         const indexController = this;
